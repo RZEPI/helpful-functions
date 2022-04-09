@@ -1,0 +1,12 @@
+#define ZERO_ASCII 48
+
+int CharToInt(char* word)
+{
+	int i = 0;
+	int number;
+	while (word[i] != '\0')
+		i++;
+	for (int j = 0; j < i; j++)
+		number += (word[j] - ZERO_ASCII) * pow(10, i -1 - j);
+	return number;
+}
